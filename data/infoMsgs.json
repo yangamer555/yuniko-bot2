@@ -1,0 +1,17 @@
+{
+  "infoMsg1": [
+    "Привет! Если вы видите это, это означает, что вы хотите добавить бота на свой сервер.",
+     "------------------------------------------------- ----",
+    "Когда вы его пригласите, вам ничего не нужно будет делать, бот все сделает за вас, если что-то нужно будет!"
+  ],
+  "infoMsg2": [
+    "Если хочешь пригласить бот вот ссылка: https://discordapp.com/api/oauth2/authorize?client_id=691911205891080243&permissions=8&scope=bot",
+    "После того, как вы это сделали, напишите `$help`, чтобы увидеть все команды, которые есть у бота."
+  ],
+  "infoMsg3": [
+    "DiscordBots Site: https://discordbots.org/bot/482128001828651008",
+    "To-Do List: Listening to Suggestions and fixing reported bugs! Do /suggest <suggestion> if you have any suggestions or /bug <bug> if you found any bugs. Thanks.",
+    "Support Server: https://discord.gg/2NQbbPN",
+    "Bot Website: https://harutohiroki.github.io/Cryptonix_x/index.html"
+  ]
+}
