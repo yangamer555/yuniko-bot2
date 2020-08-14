@@ -15,7 +15,7 @@ exports.run = (client, message, args) => {
      
      let fun = new Discord.RichEmbed()
      .setColor(Math.floor(Math.random()*16777215))
-     .setDescription(`$8ball - магический шар!\n\$animemes - аниме мемы(осторожно английский!)\n\$coinflip - брось монетку!\n\$roll\n\$rps - камень, ножницы, бумага( $rps <выбор>)`)
+     .setDescription(`$8ball - магический шар!\n\$animemes - аниме мемы(осторожно английский!)\n\$memes/meme/mem - мемы\n\$coinflip - брось монетку!\n\$roll\n\$rps - камень, ножницы, бумага( $rps <выбор>)`)
      
      let moderation = new Discord.RichEmbed()
      .setColor(Math.floor(Math.random()*16777215))
@@ -33,6 +33,10 @@ exports.run = (client, message, args) => {
     else if(args[0] === "level") return message.reply(level)
     else if(args[0] === "info") return message.reply(info)
     else if(args[0] === "fun") return message.reply(fun)
+    else if(args[0] === "other") return message.reply(fun)
+    else{
+    message.channel.send("Введите корректное название")
+    }
      
      
 };

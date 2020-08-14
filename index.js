@@ -6,15 +6,24 @@ const fs = require('fs');
 const moment = require('moment');
 require('./util/eventLoader')(client);
 
+
+
 //loading messages
 const log = message => {
   console.log(`[${moment().format('YYYY-MM-DD HH:mm:ss')}] ${message}`);
 };
 
+client.on('message', async function(message) {
+  const sex = client.emojis.find(emoji => emoji.name === "ohoho")
+  if(message.content.startsWith("sex")){
+  return message.channel.send(`${sex}`)  
+  }
+  
+})
+
 client.commands = new Discord.Collection();
 client.aliases = new Discord.Collection();
-fs.readdir('./commands/', (err, files) => {
-  if (err) console.error(err);
+fs.readdir('./commands', (err, files) => {
   log(`Loading a total of ${files.length} commands.`);
   files.forEach(f => {
     let props = require(`./commands/${f}`);
@@ -26,11 +35,13 @@ fs.readdir('./commands/', (err, files) => {
   });
 });
 
+let guilds = client.guilds.size
+
 const activities_list = [
     "$help", 
     "Слежу за тобой",
     "By Milenkoya",
-    "$help"
+    "$help",
     ];
 client.on('ready', () => {
     setInterval(() => {
