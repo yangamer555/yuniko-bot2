@@ -33,7 +33,8 @@ exports.run = (client, message, args) => {
     else if(args[0] === "level") return message.reply(level)
     else if(args[0] === "info") return message.reply(info)
     else if(args[0] === "fun") return message.reply(fun)
-    else if(args[0] === "other") return message.reply(fun)
+    else if(args[0] === "other") return message.reply(other)
+    else if(args[0] === "moderation") return message.reply(moderation)
     else{
     message.channel.send("Введите корректное название")
     }
